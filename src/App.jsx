@@ -1,14 +1,29 @@
+// imports de bibliotecas externas, instaladas via npm
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// imports de arquivos de estilos (CSS)
 import "./App.css";
+// imports de componentes/paginas internas do projeto React (arquivos .jsx)
 import Cabecalho from "./componentes/Cabecalho/Cabecalho";
-import Principal from "./componentes/Principal/Principal";
 import Rodape from "./componentes/Rodape/Rodape";
+import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
+
+const roteador = createBrowserRouter([
+  {
+    path: "",
+    element: <PaginaInicial />,
+  },
+  {
+    path: "*",
+    element: <h3>Página não encontrada!!</h3>,
+  },
+]);
 
 function App() {
   return (
     <>
       <Cabecalho />
-      <Principal />
-      <Rodape /> 
+      <RouterProvider router={roteador} />
+      <Rodape />
     </>
   );
 }

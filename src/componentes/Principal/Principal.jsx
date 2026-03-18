@@ -1,14 +1,7 @@
-import BotaoCustomizado from "../BotaoCustomizado/BotaoCustomizado";
 import "./Principal.css";
 
-function Principal() {
-  return (
-    <main className="principal__root">
-      <BotaoCustomizado tipo="primario">Salvar</BotaoCustomizado>
-
-      <BotaoCustomizado tipo="secundario">Cancelar</BotaoCustomizado>
-    </main>
-  );
+function Principal({ children }) {
+  return <main className="principal__root">{children}</main>;
 }
 
 export default Principal;
