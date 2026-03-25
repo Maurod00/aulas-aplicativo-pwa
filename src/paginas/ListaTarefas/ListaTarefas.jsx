@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Principal from "../../componentes/Principal/Principal";
+import CampoCustomizado from "../../componentes/CampoCustomizado/CampoCustomizado";
 
 function ListaTarefas({}) {
   const [novaTarefa, setNovaTarefa] = useState("");
@@ -8,9 +9,10 @@ function ListaTarefas({}) {
     <Principal>
       <h2>Lista de Tarefas</h2>
 
-      <input
+      <CampoCustomizado
+        label="Nova Tarefa"
         type="text"
-        placeholder="Nova Tarefa"
+        placeholder="Precione Enter para adicionar"
         value={novaTarefa}
         onChange={(event) => setNovaTarefa(event.target.value)}
       />
