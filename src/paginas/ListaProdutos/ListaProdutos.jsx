@@ -1,12 +1,13 @@
 import "./ListaProdutos.css";
 import Principal from "../../componentes/Principal/Principal";
+import ItemProduto from "./ItemProduto";
 
 function ListaProdutos() {
   const produtos = [
     {
       nome: "Smartphone Samsung",
       preco: 2999,
-      cores: ["#29d8d5", "#252a34", "#fc3766"],
+      cores: ["#29d8d5", "#252a34", "#fc3766", "#fcbf49"],
     },
     {
       nome: "Notebook Acer",
@@ -18,19 +19,19 @@ function ListaProdutos() {
       preco: 1499,
       cores: ["#365069", "#47c1c8", "#f95786"],
     },
+    {
+      nome: "POCO Phone F5",
+      preco: 1499,
+      cores: ["#365069", "#47c1c8", "#f95786"],
+    },
   ];
 
   return (
     <Principal>
       <h2>Lista de Produtos</h2>
 
-      {produtos.map((itemProduto, index) => {
-        return (
-          <div key={index} className="lista-produtos__item">
-            <span>{itemProduto.nome}</span>
-            <span>{itemProduto.preco}</span>
-          </div>
-        );
+      {produtos.map((itemProduto, indice) => {
+        return <ItemProduto key={indice} produto={itemProduto} />;
       })}
     </Principal>
   );
