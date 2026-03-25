@@ -13,9 +13,11 @@ function PaginaInicial() {
         Lista de Produtos
       </BotaoCustomizado>
 
-      <BotaoCustomizado tipo="secundario" aoClicar={() => navigate("/blablabla")}>
-        Rota Inválida
+      <BotaoCustomizado tipo="secundario" aoClicar={() => navigate("/lista-tarefas")}>
+        Lista de Tarefas
       </BotaoCustomizado>
+
+      <BotaoCustomizado aoClicar={() => navigate("/blablabla")}>Rota Inválida</BotaoCustomizado>
     </Principal>
   );
 }
