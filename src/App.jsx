@@ -8,7 +8,6 @@ import Rodape from "./componentes/Rodape/Rodape";
 import PaginaInicial from "./paginas/PaginaInicial/PaginaInicial";
 import ListaProdutos from "./paginas/ListaProdutos/ListaProdutos";
 import ListaTarefas from "./paginas/ListaTarefas/ListaTarefas";
-import CadastroCliente from "./componentes/CadastroCliente/CadastroCliente";
 
 const roteador = createBrowserRouter([
   {
@@ -22,10 +21,6 @@ const roteador = createBrowserRouter([
   {
     path: "lista-tarefas",
     element: <ListaTarefas />,
-  },
-  {
-    path: "cadastro-cliente",
-    element: <CadastroCliente />,
   },
   {
     path: "*",
