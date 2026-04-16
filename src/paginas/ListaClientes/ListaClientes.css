@@ -1,0 +1,6 @@
+.lista-cliente__botao-adicionar{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
